@@ -8,21 +8,32 @@
 
 詳細は [docs/spec.md](docs/spec.md) を参照。
 
-## 現在のステータス: Phase 1-2（Ingestion/CRUD API + アラート/SSE）完了
+## 現在のステータス: Phase 3（Wails + Vue3 UI）完了
 
 - [x] Phase 0: プロジェクト立ち上げ
 - [x] Phase 1: データモデル・Ingestion/CRUD API
 - [x] Phase 2: アラート・SSE
-- [ ] Phase 3: Wails + Vue3 UI
+- [x] Phase 3: Wails + Vue3 UI（ダッシュボード・予算・使用量・価格設定・Help・設定）
 - [ ] Phase 4: 仕上げ・署名・配布・LP
 
-## 使い方（開発用ヘッドレスサーバー）
+## 使い方（デスクトップアプリ）
+
+1. [Releases](../../releases) から自分のOS用のビルドをダウンロードして起動する
+2. Pricing画面でモデル単価を実際の契約に合わせて調整する（未登録モデルはコスト$0のまま記録される）
+3. Budgets画面で予算を作成（Source/Scope keyを空欄にすると全体対象、指定するとそのプロジェクト/システムに絞れる）
+4. AIシステム側にSettings画面のAPIエンドポイント・APIキーを設定し、実行のたびに使用量をPOSTしてもらう
+5. Dashboardで進捗バーを確認。80%で黄色、100%で赤になる
+
+## 使い方（開発・ヘッドレスサーバー）
 
 ```bash
 go mod tidy
-go run .      # :8424 でAPIサーバー起動
-go run ./cmd/smoketest
+make run      # :8424 でAPIサーバー起動（cmd/tbmserve）
+make ui       # frontend/ の vite dev サーバー起動
+make smoke    # 通しスモークテスト
 ```
+
+デスクトップアプリとしてビルドするには `wails build`。
 
 ### 使用量の記録・予算作成
 
