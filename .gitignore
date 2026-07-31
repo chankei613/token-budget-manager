@@ -1,0 +1,9 @@
+*.db
+*.db-shm
+*.db-wal
+.DS_Store
+/token-budget-manager
+/token-budget-manager.exe
+build/bin/
+frontend/dist/
+frontend/node_modules/
