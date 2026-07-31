@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#161B26"/>
+      <stop offset="100%" stop-color="#0A0C12"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="32" y="32" width="960" height="960" rx="220" fill="url(#bg)"/>
+  <rect x="32.5" y="32.5" width="959" height="959" rx="219.5" fill="none" stroke="#2A3040" stroke-width="1"/>
+
+  <!-- 予算ゲージ（トラック） -->
+  <circle cx="512" cy="512" r="260" fill="none" stroke="#2E3646" stroke-width="56" stroke-linecap="round"/>
+
+  <!-- 予算ゲージ（使用済み分、約65%） -->
+  <circle
+    cx="512" cy="512" r="260" fill="none" stroke="#2a78d6" stroke-width="56" stroke-linecap="round"
+    stroke-dasharray="1061 1633" transform="rotate(-90 512 512)"
+  />
+
+  <!-- 中央の$マーク -->
+  <text x="512" y="560" font-family="system-ui, -apple-system, sans-serif" font-size="220" font-weight="700" fill="#e8ecf3" text-anchor="middle">$</text>
+</svg>
