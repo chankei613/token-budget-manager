@@ -8,13 +8,18 @@
 
 詳細は [docs/spec.md](docs/spec.md) を参照。
 
-## 現在のステータス: Phase 3（Wails + Vue3 UI）完了
+## 現在のステータス: v0.1.0 リリース済み
 
 - [x] Phase 0: プロジェクト立ち上げ
 - [x] Phase 1: データモデル・Ingestion/CRUD API
 - [x] Phase 2: アラート・SSE
 - [x] Phase 3: Wails + Vue3 UI（ダッシュボード・予算・使用量・価格設定・Help・設定）
-- [ ] Phase 4: 仕上げ・署名・配布・LP
+- [x] Phase 4: 仕上げ・署名・配布・LP
+
+macOSアプリ（署名・公証済み、Apple Silicon / Intel 共通のUniversalバイナリ）は
+[GitHub Releases](https://github.com/chankei613/token-budget-manager/releases) から、
+ランディングページは https://token-budget-manager-psi.vercel.app/ から入手できる。
+アプリ内のHelpタブに使い方の説明がある。
 
 ## 使い方（デスクトップアプリ）
 
